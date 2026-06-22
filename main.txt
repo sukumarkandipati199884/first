@@ -1,0 +1,56 @@
+{
+  "files": [
+    {
+      "name": "package.json",
+      "language": "json",
+      "content": "{\n  \"name\": \"youtube-clone\",\n  \"version\": \"1.0.0\",\n  \"description\": \"A YouTube clone with a banana logo\",\n  \"main\": \"src/index.js\",\n  \"scripts\": {\n    \"start\": \"react-scripts start\",\n    \"build\": \"react-scripts build\",\n    \"test\": \"react-scripts test\",\n    \"eject\": \"react-scripts eject\"\n  },\n  \"dependencies\": {\n    \"react\": \"^18.0.0\",\n    \"react-dom\": \"^18.0.0\",\n    \"react-scripts\": \"^5.0.0\"\n  },\n  \"eslintConfig\": {\n    \"extends\": [\n      \"react-app\",\n      \"react-app/jest\"\n    ]\n  },\n  \"browserslist\": {\n    \"production\": [\n      \">0.2%\",\n      \"not dead\",\n      \"not op_mini all\"\n    ],\n    \"development\": [\n      \"last 1 chrome version\",\n      \"last 1 firefox version\",\n      \"last 1 safari version\"\n    ]\n  }\n}"
+    },
+    {
+      "name": "src/index.js",
+      "language": "javascript",
+      "content": "import React from 'react';\nimport ReactDOM from 'react-dom/client';\nimport './index.css';\nimport App from './App';\n\nconst root = ReactDOM.createRoot(document.getElementById('root'));\nroot.render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>\n);"
+    },
+    {
+      "name": "src/App.jsx",
+      "language": "javascript",
+      "content": "import React from 'react';\nimport './App.css';\nimport Navbar from './components/Navbar';\nimport VideoList from './components/VideoList';\n\nfunction App() {\n  return (\n    <div className=\"App\">\n      <Navbar />\n      <VideoList />\n    </div>\n  );\n}\n\nexport default App;"
+    },
+    {
+      "name": "src/App.css",
+      "language": "css",
+      "content": "body {\n  margin: 0;\n  font-family: Arial, sans-serif;\n  background-color: #f9f9f9;\n}\n\n.App {\n  text-align: center;\n}\n"
+    },
+    {
+      "name": "src/components/Navbar.jsx",
+      "language": "javascript",
+      "content": "import React from 'react';\nimport './Navbar.css';\nimport bananaLogo from '../assets/banana-logo.png';\n\nfunction Navbar() {\n  return (\n    <div className=\"navbar\">\n      <img src={bananaLogo} alt=\"Banana Logo\" className=\"logo\" />\n      <input type=\"text\" placeholder=\"Search\" className=\"search-bar\" />\n    </div>\n  );\n}\n\nexport default Navbar;"
+    },
+    {
+      "name": "src/components/Navbar.css",
+      "language": "css",
+      "content": ".navbar {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 10px;\n  background-color: #fff;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n}\n\n.logo {\n  height: 40px;\n}\n\n.search-bar {\n  width: 300px;\n  padding: 5px;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n}\n"
+    },
+    {
+      "name": "src/components/VideoList.jsx",
+      "language": "javascript",
+      "content": "import React from 'react';\nimport './VideoList.css';\nimport VideoItem from './VideoItem';\n\nconst videos = [\n  {\n    id: 1,\n    title: 'Amazing Nature',\n    thumbnail: 'https://via.placeholder.com/150',\n    channel: 'Nature Channel'\n  },\n  {\n    id: 2,\n    title: 'Tech Innovations',\n    thumbnail: 'https://via.placeholder.com/150',\n    channel: 'Tech World'\n  },\n  {\n    id: 3,\n    title: 'Cooking Tips',\n    thumbnail: 'https://via.placeholder.com/150',\n    channel: 'Chef\'s Delight'\n  }\n];\n\nfunction VideoList() {\n  return (\n    <div className=\"video-list\">\n      {videos.map(video => (\n        <VideoItem key={video.id} video={video} />\n      ))}\n    </div>\n  );\n}\n\nexport default VideoList;"
+    },
+    {
+      "name": "src/components/VideoList.css",
+      "language": "css",
+      "content": ".video-list {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  padding: 20px;\n}\n"
+    },
+    {
+      "name": "src/components/VideoItem.jsx",
+      "language": "javascript",
+      "content": "import React from 'react';\nimport './VideoItem.css';\n\nfunction VideoItem({ video }) {\n  return (\n    <div className=\"video-item\">\n      <img src={video.thumbnail} alt={video.title} className=\"thumbnail\" />\n      <div className=\"video-info\">\n        <h4>{video.title}</h4>\n        <p>{video.channel}</p>\n      </div>\n    </div>\n  );\n}\n\nexport default VideoItem;"
+    },
+    {
+      "name": "src/components/VideoItem.css",
+      "language": "css",
+      "content": ".video-item {\n  width: 200px;\n  margin: 10px;\n  background-color: #fff;\n  border-radius: 8px;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n  overflow: hidden;\n}\n\n.thumbnail {\n  width: 100%;\n  height: auto;\n}\n\n.video-info {\n  padding: 10px;\n  text-align: left;\n}\n\n.video-info h4 {\n  margin: 0;\n  font-size: 16px;\n}\n\n.video-info p {\n  margin: 5px 0 0;\n  color: #555;\n  font-size: 14px;\n}\n"
+    },
+    {
+      "name": "src/assets/banana-logo.png",
+      "language": "binary",
+      "content": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAp0lEQVR42mJ8//8/AyUYTFhY+P//P4P+Pz4zMDAwMDAw8P///w8MDPj//z8DAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM
