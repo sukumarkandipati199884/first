@@ -1,0 +1,34 @@
+service: aws-serverless-api
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  environment:
+    TABLE_NAME: ${self:custom.tableName}
+
+functions:
+  getItem:
+    handler: handler.handler
+    events:
+      - http:
+          path: items/{id}
+          method: get
+
+resources:
+  Resources:
+    ItemsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.tableName}
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
+custom:
+  tableName: ItemsTable-${opt:stage, 'dev'}
