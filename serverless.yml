@@ -4,7 +4,7 @@ provider:
   name: aws
   runtime: nodejs14.x
   environment:
-    TABLE_NAME: ${self:custom.tableName}
+    DYNAMODB_TABLE: ${self:service}-table
 
 functions:
   getItem:
@@ -19,7 +19,7 @@ resources:
     ItemsTable:
       Type: AWS::DynamoDB::Table
       Properties:
-        TableName: ${self:custom.tableName}
+        TableName: ${self:provider.environment.DYNAMODB_TABLE}
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S
@@ -29,6 +29,3 @@ resources:
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-
-custom:
-  tableName: ItemsTable-${opt:stage, 'dev'}
