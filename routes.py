@@ -1,40 +1,41 @@
-from flask import Blueprint, jsonify, request, abort
+from flask import Blueprint, request, jsonify
 
-student_bp = Blueprint('students', __name__, url_prefix='/students')
+student_blueprint = Blueprint('students', __name__)
 
 # In-memory database
 students = {}
 
-@student_bp.route('/', methods=['POST'])
+# Create a new student record
+@student_blueprint.route('/students', methods=['POST'])
 def create_student():
     data = request.get_json()
-    if not data or 'id' not in data or 'name' not in data:
-        abort(400, description="Invalid input")
-    student_id = data['id']
-    if student_id in students:
-        abort(400, description="Student already exists")
-    students[student_id] = data['name']
-    return jsonify({'id': student_id, 'name': data['name']}), 201
+    student_id = data.get('id')
+    if not student_id or student_id in students:
+        return jsonify({'error': 'Invalid or duplicate student ID'}), 400
+    students[student_id] = data
+    return jsonify({'message': 'Student created successfully'}), 201
 
-@student_bp.route('/<int:student_id>', methods=['GET'])
+# Read a student record
+@student_blueprint.route('/students/<student_id>', methods=['GET'])
 def get_student(student_id):
-    if student_id not in students:
-        abort(404, description="Student not found")
-    return jsonify({'id': student_id, 'name': students[student_id]})
+    student = students.get(student_id)
+    if not student:
+        return jsonify({'error': 'Student not found'}), 404
+    return jsonify(student), 200
 
-@student_bp.route('/<int:student_id>', methods=['PUT'])
+# Update a student record
+@student_blueprint.route('/students/<student_id>', methods=['PUT'])
 def update_student(student_id):
     if student_id not in students:
-        abort(404, description="Student not found")
+        return jsonify({'error': 'Student not found'}), 404
     data = request.get_json()
-    if not data or 'name' not in data:
-        abort(400, description="Invalid input")
-    students[student_id] = data['name']
-    return jsonify({'id': student_id, 'name': data['name']})
+    students[student_id].update(data)
+    return jsonify({'message': 'Student updated successfully'}), 200
 
-@student_bp.route('/<int:student_id>', methods=['DELETE'])
+# Delete a student record
+@student_blueprint.route('/students/<student_id>', methods=['DELETE'])
 def delete_student(student_id):
     if student_id not in students:
-        abort(404, description="Student not found")
+        return jsonify({'error': 'Student not found'}), 404
     del students[student_id]
-    return jsonify({'result': 'success'})
+    return jsonify({'message': 'Student deleted successfully'}), 200
