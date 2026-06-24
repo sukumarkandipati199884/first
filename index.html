@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventory Management System</title>
+    <title>Student Management System</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -13,8 +13,8 @@
             <nav>
                 <ul>
                     <li class="active"><a href="#">Dashboard</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Stock</a></li>
+                    <li><a href="#">Students</a></li>
+                    <li><a href="#">Courses</a></li>
                     <li><a href="#">Reports</a></li>
                     <li><a href="#">Settings</a></li>
                 </ul>
@@ -23,57 +23,44 @@
         <main class="main-content">
             <header class="header">
                 <h1>Dashboard</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
             </header>
-            <section class="kpi-cards">
-                <div class="kpi-card">
-                    <h2>Total Products</h2>
-                    <p>150</p>
+            <section class="content">
+                <div class="card">
+                    <h2>Student Overview</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Grade</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>16</td>
+                                <td>A</td>
+                                <td><button class="action-btn">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>17</td>
+                                <td>B</td>
+                                <td><button class="action-btn">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <td>Emily Johnson</td>
+                                <td>15</td>
+                                <td>A</td>
+                                <td><button class="action-btn">Edit</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="kpi-card">
-                    <h2>Low Stock</h2>
-                    <p>5</p>
-                </div>
-                <div class="kpi-card">
-                    <h2>Out of Stock</h2>
-                    <p>2</p>
-                </div>
-                <div class="kpi-card">
-                    <h2>New Orders</h2>
-                    <p>12</p>
-                </div>
-            </section>
-            <section class="analytics">
-                <div class="chart" id="sales-chart"></div>
-                <div class="chart" id="stock-chart"></div>
-            </section>
-            <section class="data-table">
-                <h2>Recent Activity</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Activity</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>2023-10-01</td>
-                            <td>Product Added</td>
-                            <td>Completed</td>
-                        </tr>
-                        <tr>
-                            <td>2023-10-02</td>
-                            <td>Stock Updated</td>
-                            <td>Pending</td>
-                        </tr>
-                        <tr>
-                            <td>2023-10-03</td>
-                            <td>Order Shipped</td>
-                            <td>Completed</td>
-                        </tr>
-                    </tbody>
-                </table>
             </section>
         </main>
     </div>
