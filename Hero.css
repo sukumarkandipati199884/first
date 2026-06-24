@@ -1,6 +1,6 @@
 .hero {
-  background-color: #282c34;
-  color: white;
+  background-color: #6200ea;
+  color: #ffffff;
   padding: 100px 20px;
   text-align: center;
 }
@@ -12,5 +12,5 @@
 
 .hero p {
   font-size: 1.2em;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
