@@ -1,20 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const NavbarContainer = styled.div`
-  height: 60px;
-  background-color: #282c34;
-  color: white;
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-`;
+import './Navbar.css';
 
 function Navbar() {
   return (
-    <NavbarContainer>
+    <nav className="navbar">
       <h1>SaaS Admin Dashboard</h1>
-    </NavbarContainer>
+    </nav>
   );
 }
 
