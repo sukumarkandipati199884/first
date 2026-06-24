@@ -1,11 +1,13 @@
 import React from 'react';
-import './Navbar.css';
+import { AppBar, Toolbar, Typography } from '@mui/material';
 
 function Navbar() {
   return (
-    <nav className="navbar">
-      <h1>SaaS Admin Dashboard</h1>
-    </nav>
+    <AppBar position="static">
+      <Toolbar>
+        <Typography variant="h6">SaaS Admin Dashboard</Typography>
+      </Toolbar>
+    </AppBar>
   );
 }
 
