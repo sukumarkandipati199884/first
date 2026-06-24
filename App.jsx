@@ -1,17 +1,34 @@
 import React from 'react';
-import './App.css';
+import { Container, Grid } from '@mui/material';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
-import Dashboard from './components/Dashboard';
+import KPISection from './components/KPISection';
+import AnalyticsSection from './components/AnalyticsSection';
+import UserTable from './components/UserTable';
+import ActivityFeed from './components/ActivityFeed';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <div className="main-content">
-        <Sidebar />
-        <Dashboard />
-      </div>
+      <Sidebar />
+      <Container maxWidth="lg">
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={6} lg={4}>
+            <KPISection />
+          </Grid>
+          <Grid item xs={12} md={6} lg={8}>
+            <AnalyticsSection />
+          </Grid>
+          <Grid item xs={12}>
+            <UserTable />
+          </Grid>
+          <Grid item xs={12}>
+            <ActivityFeed />
+          </Grid>
+        </Grid>
+      </Container>
     </div>
   );
 }
