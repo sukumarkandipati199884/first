@@ -1,16 +1,23 @@
 import React from 'react';
-import './Sidebar.css';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
 
 function Sidebar() {
   return (
-    <aside className="sidebar">
-      <h2>Sidebar</h2>
-      <ul>
-        <li>Link 1</li>
-        <li>Link 2</li>
-        <li>Link 3</li>
-      </ul>
-    </aside>
+    <div style={{ width: '250px', backgroundColor: '#f4f4f4' }}>
+      <List component="nav">
+        <ListItem button>
+          <ListItemText primary="Dashboard" />
+        </ListItem>
+        <ListItem button>
+          <ListItemText primary="Users" />
+        </ListItem>
+        <ListItem button>
+          <ListItemText primary="Settings" />
+        </ListItem>
+      </List>
+    </div>
   );
 }
 
