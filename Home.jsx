@@ -1,11 +1,12 @@
 import React from 'react';
+import './Home.css';
 
 function Home() {
   return (
-    <div>
-      <h1>Welcome to the Healthcare Appointment Booking App</h1>
-      <p>Find and book appointments with doctors easily.</p>
-    </div>
+    <section id="home" className="home">
+      <h2>Welcome to My Portfolio</h2>
+      <p>This is the homepage section.</p>
+    </section>
   );
 }
 
