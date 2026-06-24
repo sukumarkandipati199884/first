@@ -10,7 +10,6 @@ logging.basicConfig(level=logging.INFO)
 # Register blueprints
 app.register_blueprint(student_blueprint)
 
-# Error handling
 @app.errorhandler(404)
 def not_found(error):
     return jsonify({'error': 'Not found'}), 404
