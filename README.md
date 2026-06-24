@@ -1,29 +1,39 @@
-# Flask Student Records API
+# Student Management API
 
-This is a simple Flask REST API for managing student records with create, read, update, and delete (CRUD) operations.
+This is a Flask-based REST API for managing students. It provides CRUD operations and uses an SQLite database.
 
 ## Setup
 
-1. Install the required packages:
+1. Create a virtual environment:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
 
-```
-pip install -r requirements.txt
-```
+2. Install the dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-2. Run the application:
+3. Initialize the database:
+   ```bash
+   python init_db.py
+   ```
 
-```
-python app.py
-```
+4. Run the application:
+   ```bash
+   python app.py
+   ```
 
-## API Endpoints
+The API will be available at `http://localhost:5000`.
 
-- `POST /students`: Create a new student record.
-- `GET /students/<student_id>`: Retrieve a student record by ID.
-- `PUT /students/<student_id>`: Update a student record by ID.
-- `DELETE /students/<student_id>`: Delete a student record by ID.
+## Endpoints
 
-## Error Handling
+- `GET /students`: Retrieve a list of students.
+- `POST /students`: Create a new student.
+- `PUT /students/<id>`: Update a student by ID.
+- `DELETE /students/<id>`: Delete a student by ID.
 
-- Returns `404` if a student is not found.
-- Returns `400` for invalid or duplicate student IDs.
+## Deployment
+
+This application is ready for deployment on AWS or any other cloud provider. Ensure to set up the environment variables and database configurations as needed.
