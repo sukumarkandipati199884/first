@@ -10,16 +10,10 @@ body {
 .App {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
-.main-content {
-  display: flex;
+.container {
   flex: 1;
-}
-
-@media (max-width: 768px) {
-  .main-content {
-    flex-direction: column;
-  }
+  padding: 20px;
 }
