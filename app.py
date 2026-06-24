@@ -1,14 +1,16 @@
 from flask import Flask, jsonify
-from routes import student_blueprint
+from flask_cors import CORS
+from routes import student_routes
 import logging
 
 app = Flask(__name__)
+CORS(app)
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 
 # Register blueprints
-app.register_blueprint(student_blueprint)
+app.register_blueprint(student_routes)
 
 @app.errorhandler(404)
 def not_found(error):
