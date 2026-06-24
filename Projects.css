@@ -4,9 +4,5 @@
 }
 
 .projects h2 {
-  color: #333;
-}
-
-.projects p {
-  color: #666;
+  font-size: 2em;
 }
