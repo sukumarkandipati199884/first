@@ -2,17 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 
 const AnalyticsContainer = styled.div`
-  padding: 20px;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
 `;
 
 function AnalyticsSection() {
   return (
     <AnalyticsContainer>
       <h2>Analytics</h2>
-      <p>Analytics content goes here...</p>
+      <p>Analytics data and charts will go here.</p>
     </AnalyticsContainer>
   );
 }
