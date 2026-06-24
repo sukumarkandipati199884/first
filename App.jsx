@@ -1,22 +1,29 @@
 import React from 'react';
-import './App.css';
+import styled from 'styled-components';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
-import About from './components/About';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
+import Sidebar from './components/Sidebar';
+import Dashboard from './components/Dashboard';
+
+const AppContainer = styled.div`
+  display: flex;
+  height: 100vh;
+`;
+
+const MainContent = styled.div`
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Home />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
-    </div>
+    <AppContainer>
+      <Sidebar />
+      <MainContent>
+        <Navbar />
+        <Dashboard />
+      </MainContent>
+    </AppContainer>
   );
 }
 
