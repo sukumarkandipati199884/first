@@ -1,6 +1,6 @@
 # Flask Student Records API
 
-This is a simple Flask REST API for managing student records. It supports creating, reading, updating, and deleting student records.
+This is a simple Flask REST API for managing student records. It supports create, read, update, and delete operations.
 
 ## Setup
 
@@ -14,9 +14,13 @@ This is a simple Flask REST API for managing student records. It supports creati
    python app.py
    ```
 
-## Endpoints
+## API Endpoints
 
-- `POST /students`: Create a new student record.
-- `GET /students/<student_id>`: Retrieve a student record by ID.
-- `PUT /students/<student_id>`: Update a student record by ID.
-- `DELETE /students/<student_id>`: Delete a student record by ID.
+- `POST /students/`: Create a new student record.
+- `GET /students/<id>`: Retrieve a student record by ID.
+- `PUT /students/<id>`: Update a student record by ID.
+- `DELETE /students/<id>`: Delete a student record by ID.
+
+## Error Handling
+
+The API returns appropriate HTTP status codes and error messages for invalid requests.
