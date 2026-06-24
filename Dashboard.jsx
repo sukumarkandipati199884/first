@@ -1,20 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import KPICards from './KPICards';
+import KPISection from './KPISection';
 import AnalyticsSection from './AnalyticsSection';
 import UserTable from './UserTable';
 import ActivityFeed from './ActivityFeed';
 
 const DashboardContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
 `;
 
 function Dashboard() {
   return (
     <DashboardContainer>
-      <KPICards />
+      <KPISection />
       <AnalyticsSection />
       <UserTable />
       <ActivityFeed />
