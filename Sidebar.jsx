@@ -1,16 +1,21 @@
 import React from 'react';
-import './Sidebar.css';
+import { Drawer, List, ListItem, ListItemText } from '@mui/material';
 
 function Sidebar() {
   return (
-    <aside className="sidebar">
-      <ul>
-        <li>Dashboard</li>
-        <li>Analytics</li>
-        <li>Users</li>
-        <li>Activity</li>
-      </ul>
-    </aside>
+    <Drawer variant="permanent" anchor="left">
+      <List>
+        <ListItem button>
+          <ListItemText primary="Dashboard" />
+        </ListItem>
+        <ListItem button>
+          <ListItemText primary="Users" />
+        </ListItem>
+        <ListItem button>
+          <ListItemText primary="Settings" />
+        </ListItem>
+      </List>
+    </Drawer>
   );
 }
 
