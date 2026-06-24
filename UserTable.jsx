@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 const TableContainer = styled.div`
-  padding: 20px;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
 `;
 
 const Table = styled.table`
@@ -14,8 +15,7 @@ const Table = styled.table`
 
   th, td {
     padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
+    border-bottom: 1px solid #ddd;
   }
 
   th {
@@ -26,7 +26,7 @@ const Table = styled.table`
 function UserTable() {
   return (
     <TableContainer>
-      <h2>User Table</h2>
+      <h2>Users</h2>
       <Table>
         <thead>
           <tr>
