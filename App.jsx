@@ -2,15 +2,15 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
-import MainContent from './components/MainContent';
+import Dashboard from './components/Dashboard';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <div className="content">
+      <div className="main-container">
         <Sidebar />
-        <MainContent />
+        <Dashboard />
       </div>
     </div>
   );
