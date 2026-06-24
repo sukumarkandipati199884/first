@@ -1,8 +1,15 @@
 .about {
-  padding: 50px;
-  background-color: #e2e2e2;
+  background-color: #1f1f1f;
+  color: white;
 }
 
 .about h2 {
   font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1em;
+  max-width: 600px;
+  margin: 0 auto;
 }
