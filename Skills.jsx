@@ -5,7 +5,12 @@ function Skills() {
   return (
     <section id="skills" className="skills">
       <h2>Skills</h2>
-      <p>These are my skills.</p>
+      <ul>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>CSS</li>
+      </ul>
     </section>
   );
 }
