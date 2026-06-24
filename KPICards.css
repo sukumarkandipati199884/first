@@ -1,0 +1,24 @@
+.kpi-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.kpi-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  margin: 0 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .kpi-cards {
+    flex-direction: column;
+  }
+
+  .kpi-card {
+    margin: 0.5rem 0;
+  }
+}
