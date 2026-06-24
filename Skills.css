@@ -1,12 +1,8 @@
 .skills {
   padding: 50px;
-  background-color: #c0c0c0;
+  background-color: #b8b8b8;
 }
 
 .skills h2 {
-  color: #333;
-}
-
-.skills p {
-  color: #666;
+  font-size: 2em;
 }
