@@ -1,17 +1,24 @@
 import React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
+import styled from 'styled-components';
+import KPICards from './KPICards';
+import AnalyticsSection from './AnalyticsSection';
+import UserTable from './UserTable';
+import ActivityFeed from './ActivityFeed';
+
+const DashboardContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+`;
 
 function Dashboard() {
   return (
-    <Container style={{ padding: '20px' }}>
-      <Typography variant="h4" gutterBottom>
-        Welcome to the Admin Dashboard
-      </Typography>
-      <Typography variant="body1">
-        Here you can manage users, view statistics, and configure settings.
-      </Typography>
-    </Container>
+    <DashboardContainer>
+      <KPICards />
+      <AnalyticsSection />
+      <UserTable />
+      <ActivityFeed />
+    </DashboardContainer>
   );
 }
 
