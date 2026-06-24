@@ -1,8 +1,28 @@
 .projects {
-  padding: 50px;
-  background-color: #d0d0d0;
+  background-color: #1f1f1f;
+  color: white;
 }
 
 .projects h2 {
   font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.project-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-item {
+  background-color: #333;
+  margin: 10px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
 }
