@@ -1,19 +1,24 @@
-# AWS Serverless API
+# Flask REST API
 
-This project is a serverless API built using AWS Lambda, API Gateway, and DynamoDB.
+This is a simple Flask REST API with routes, validation, JSON responses, logging, and error handling.
 
-## Deployment
+## Setup
 
-Ensure you have the Serverless Framework installed. Deploy the service using:
+1. Install dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
-```
-serverless deploy
-```
+2. Run the application:
+   ```
+   python app.py
+   ```
 
-## Environment Variables
+## API Endpoints
 
-- `TABLE_NAME`: The name of the DynamoDB table used by the application.
+- `GET /api/data?param=value` - Fetch data with a required query parameter `param`.
 
-## IAM Configuration
+## Error Handling
 
-Ensure that your IAM role has the necessary permissions to access DynamoDB and execute Lambda functions.
+- 404 Not Found
+- 500 Internal Server Error
