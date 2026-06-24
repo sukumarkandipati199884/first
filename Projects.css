@@ -1,6 +1,7 @@
 .projects {
   background-color: #1f1f1f;
-  color: white;
+  color: #ffffff;
+  text-align: center;
 }
 
 .projects h2 {
@@ -15,7 +16,8 @@
 }
 
 .project-item {
-  background-color: #333;
+  background-color: #6200ea;
+  color: #ffffff;
   margin: 10px;
   padding: 20px;
   width: 200px;
