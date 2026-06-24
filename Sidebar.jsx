@@ -1,23 +1,23 @@
 import React from 'react';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
+import styled from 'styled-components';
+
+const SidebarContainer = styled.div`
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+`;
 
 function Sidebar() {
   return (
-    <div style={{ width: '250px', backgroundColor: '#f4f4f4' }}>
-      <List component="nav">
-        <ListItem button>
-          <ListItemText primary="Dashboard" />
-        </ListItem>
-        <ListItem button>
-          <ListItemText primary="Users" />
-        </ListItem>
-        <ListItem button>
-          <ListItemText primary="Settings" />
-        </ListItem>
-      </List>
-    </div>
+    <SidebarContainer>
+      <ul>
+        <li>Dashboard</li>
+        <li>Analytics</li>
+        <li>Users</li>
+        <li>Activity</li>
+      </ul>
+    </SidebarContainer>
   );
 }
 
