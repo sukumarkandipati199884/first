@@ -4,8 +4,7 @@ import './Home.css';
 function Home() {
   return (
     <section id="home" className="home">
-      <h2>Welcome to My Portfolio</h2>
-      <p>This is the homepage section.</p>
+      <h1>Welcome to My Portfolio</h1>
     </section>
   );
 }
