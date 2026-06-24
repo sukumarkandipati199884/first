@@ -1,18 +1,16 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-.App {
-  text-align: center;
+.main-content {
+  display: flex;
+  flex: 1;
 }
 
 @media (max-width: 768px) {
-  .App {
-    padding: 20px;
+  .main-content {
+    flex-direction: column;
   }
 }
