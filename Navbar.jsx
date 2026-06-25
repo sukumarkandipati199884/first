@@ -1,16 +1,18 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 
-const Navbar = () => {
+function Navbar() {
   return (
-    <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Event Management Platform
-        </Typography>
-      </Toolbar>
-    </AppBar>
+    <nav className="navbar">
+      <h1>Job Portal</h1>
+      <div className="links">
+        <Link to="/">Dashboard</Link>
+        <Link to="/jobs">Jobs</Link>
+        <Link to="/applications">Applications</Link>
+      </div>
+    </nav>
   );
-};
+}
 
 export default Navbar;
