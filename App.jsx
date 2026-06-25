@@ -1,25 +1,25 @@
 import React from 'react';
-import { Container, Grid } from '@mui/material';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
+import JobListings from './components/JobListings';
+import Applications from './components/Applications';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Container maxWidth="lg">
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={3}>
-            <Sidebar />
-          </Grid>
-          <Grid item xs={12} md={9}>
-            <Dashboard />
-          </Grid>
-        </Grid>
-      </Container>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/jobs" element={<JobListings />} />
+            <Route path="/applications" element={<Applications />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
