@@ -16,7 +16,7 @@ section {
 }
 
 button {
-  background-color: #6200ea;
+  background-color: #1f1f1f;
   color: #ffffff;
   border: none;
   padding: 10px 20px;
@@ -25,7 +25,7 @@ button {
 }
 
 button:hover {
-  background-color: #3700b3;
+  background-color: #333333;
 }
 
 @media (max-width: 768px) {
