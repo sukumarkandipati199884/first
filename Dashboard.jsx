@@ -1,13 +1,19 @@
 import React from 'react';
-import { Typography, Box } from '@mui/material';
+import { Card, CardContent, Typography } from '@mui/material';
 
-function Dashboard() {
+const Dashboard = () => {
   return (
-    <Box sx={{ mt: 4 }}>
-      <Typography variant="h4">Dashboard</Typography>
-      <Typography variant="body1">Welcome to your dashboard!</Typography>
-    </Box>
+    <Card>
+      <CardContent>
+        <Typography variant="h5" component="div">
+          Analytics Dashboard
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Here you can view the analytics of your events.
+        </Typography>
+      </CardContent>
+    </Card>
   );
-}
+};
 
 export default Dashboard;
