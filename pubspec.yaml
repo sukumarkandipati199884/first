@@ -1,0 +1,13 @@
+name: mobile_banking_app
+description: A Flutter mobile banking application.
+version: 1.0.0+1
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  provider: ^5.0.0
+  http: ^0.13.3
+flutter:
+  uses-material-design: true
