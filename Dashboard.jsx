@@ -1,15 +1,14 @@
 import React from 'react';
-import './Dashboard.css';
-import KPICards from './KPICards';
-import Analytics from './Analytics';
+import KPISection from './KPISection';
+import AnalyticsSection from './AnalyticsSection';
 import UserTable from './UserTable';
 import ActivityFeed from './ActivityFeed';
 
 function Dashboard() {
   return (
     <div className="dashboard">
-      <KPICards />
-      <Analytics />
+      <KPISection />
+      <AnalyticsSection />
       <UserTable />
       <ActivityFeed />
     </div>
