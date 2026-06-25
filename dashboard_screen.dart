@@ -27,7 +27,7 @@ class DashboardScreen extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => ProfileScreen()),
               );
             },
-            child: Text('View Profile'),
+            child: Text('Profile'),
           ),
         ],
       ),
