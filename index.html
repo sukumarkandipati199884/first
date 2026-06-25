@@ -3,84 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Management System</title>
+    <title>Portfolio - Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="app-container">
-        <aside class="sidebar">
-            <nav>
-                <ul>
-                    <li class="active"><a href="#">Dashboard</a></li>
-                    <li><a href="#">Students</a></li>
-                    <li><a href="#">Analytics</a></li>
-                    <li><a href="#">Settings</a></li>
-                </ul>
-            </nav>
-        </aside>
-        <main class="main-content">
-            <header class="header">
-                <h1>Dashboard</h1>
-                <div class="user-profile">
-                    <div class="avatar">JD</div>
-                    <span>John Doe</span>
-                </div>
-            </header>
-            <section class="kpi-cards">
-                <div class="kpi-card">
-                    <h2>Total Students</h2>
-                    <p>1,234</p>
-                </div>
-                <div class="kpi-card">
-                    <h2>New Enrollments</h2>
-                    <p>56</p>
-                </div>
-                <div class="kpi-card">
-                    <h2>Graduation Rate</h2>
-                    <p>85%</p>
-                </div>
-            </section>
-            <section class="analytics">
-                <div class="chart">
-                    <h2>Enrollment Trends</h2>
-                    <canvas id="enrollmentChart"></canvas>
-                </div>
-            </section>
-            <section class="student-records">
-                <h2>Student Records</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Age</th>
-                            <th>Grade</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Alice Johnson</td>
-                            <td>20</td>
-                            <td>A</td>
-                            <td>Active</td>
-                        </tr>
-                        <tr>
-                            <td>Bob Smith</td>
-                            <td>22</td>
-                            <td>B</td>
-                            <td>Inactive</td>
-                        </tr>
-                        <tr>
-                            <td>Charlie Brown</td>
-                            <td>21</td>
-                            <td>A</td>
-                            <td>Active</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </main>
-    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm John Doe</h1>
+                <p>Software Engineer & Web Developer</p>
+                <a href="#contact" class="btn">Get in Touch</a>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a passionate software engineer with experience in building modern web applications. I love creating efficient and scalable solutions.</p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Python</li>
+                <li>CSS</li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project One</h3>
+                <p>A web application built with React and Node.js.</p>
+            </div>
+            <div class="project">
+                <h3>Project Two</h3>
+                <p>An e-commerce platform developed using Python and Django.</p>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
