@@ -1,15 +1,20 @@
 import React from 'react';
+import { List, ListItem, ListItemText } from '@mui/material';
 
-function Sidebar() {
+const Sidebar = () => {
   return (
-    <aside className="sidebar">
-      <ul>
-        <li>Home</li>
-        <li>Profile</li>
-        <li>Settings</li>
-      </ul>
-    </aside>
+    <List component="nav">
+      <ListItem button>
+        <ListItemText primary="Create Event" />
+      </ListItem>
+      <ListItem button>
+        <ListItemText primary="Manage Attendees" />
+      </ListItem>
+      <ListItem button>
+        <ListItemText primary="Analytics Dashboard" />
+      </ListItem>
+    </List>
   );
-}
+};
 
 export default Sidebar;
