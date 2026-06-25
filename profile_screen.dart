@@ -8,7 +8,7 @@ class ProfileScreen extends StatelessWidget {
         title: Text('Profile'),
       ),
       body: Center(
-        child: Text('User Profile Information'),
+        child: Text('User profile details will be displayed here.'),
       ),
     );
   }
