@@ -5,7 +5,7 @@ function About() {
   return (
     <section id="about" className="about">
       <h2>About Me</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+      <p>I am a passionate software engineer with experience in building web applications.</p>
     </section>
   );
 }
