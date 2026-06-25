@@ -8,7 +8,7 @@ class TransactionsScreen extends StatelessWidget {
         title: Text('Transactions'),
       ),
       body: Center(
-        child: Text('List of Transactions'),
+        child: Text('List of transactions will be displayed here.'),
       ),
     );
   }
