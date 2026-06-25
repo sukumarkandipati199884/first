@@ -1,18 +1,12 @@
 import React from 'react';
-import KPISection from './KPISection';
-import AnalyticsSection from './AnalyticsSection';
-import UserTable from './UserTable';
-import ActivityFeed from './ActivityFeed';
 
-function Dashboard() {
+const Dashboard = () => {
   return (
-    <div className="dashboard">
-      <KPISection />
-      <AnalyticsSection />
-      <UserTable />
-      <ActivityFeed />
+    <div>
+      <h1>Dashboard</h1>
+      <p>Welcome to the SaaS Dashboard!</p>
     </div>
   );
-}
+};
 
 export default Dashboard;
