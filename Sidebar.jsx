@@ -1,20 +1,15 @@
 import React from 'react';
-import { Drawer, List, ListItem, ListItemText } from '@mui/material';
-import { Link } from 'react-router-dom';
 
-const Sidebar = () => {
+function Sidebar() {
   return (
-    <Drawer variant="permanent" anchor="left">
-      <List>
-        <ListItem button component={Link} to="/">
-          <ListItemText primary="Dashboard" />
-        </ListItem>
-        <ListItem button component={Link} to="/users">
-          <ListItemText primary="Users" />
-        </ListItem>
-      </List>
-    </Drawer>
+    <aside className="sidebar">
+      <ul>
+        <li>Home</li>
+        <li>Profile</li>
+        <li>Settings</li>
+      </ul>
+    </aside>
   );
-};
+}
 
 export default Sidebar;
