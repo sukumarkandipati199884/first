@@ -1,40 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+import { CssBaseline, Container } from '@mui/material';
 import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
-import Dashboard from './pages/Dashboard';
-import Users from './pages/Users';
-import Login from './pages/Login';
+import Login from './components/Login';
+import Dashboard from './components/Dashboard';
+import Transactions from './components/Transactions';
+import Profile from './components/Profile';
 import './App.css';
 
-const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const theme = createTheme({
-    palette: {
-      mode: darkMode ? 'dark' : 'light',
-    },
-  });
-
+function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <Router>
       <CssBaseline />
-      <Router>
-        <div className="app-container">
-          <Navbar toggleDarkMode={() => setDarkMode(!darkMode)} />
-          <Sidebar />
-          <main className="content">
-            <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/users" element={<Users />} />
-              <Route path="/login" element={<Login />} />
-            </Routes>
-          </main>
-        </div>
-      </Router>
-    </ThemeProvider>
+      <Navbar />
+      <Container maxWidth="lg">
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/transactions" element={<Transactions />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </Container>
+    </Router>
   );
-};
+}
 
 export default App;
