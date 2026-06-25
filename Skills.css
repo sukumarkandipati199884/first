@@ -1,7 +1,6 @@
 .skills {
-  background-color: #121212;
+  background-color: #282c34;
   color: #ffffff;
-  text-align: center;
 }
 
 .skills h2 {
@@ -10,7 +9,7 @@
 }
 
 .skills ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
 }
 
