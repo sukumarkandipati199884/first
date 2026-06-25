@@ -1,14 +1,14 @@
 import React from 'react';
-import { Card, CardContent, Typography } from '@mui/material';
 
 function ActivityFeed() {
   return (
-    <Card>
-      <CardContent>
-        <Typography variant="h5">Activity Feed</Typography>
-        <Typography variant="body2">Recent activities and updates</Typography>
-      </CardContent>
-    </Card>
+    <div className="activity-feed">
+      <h2>Activity Feed</h2>
+      <ul>
+        <li>User John Doe logged in</li>
+        <li>User Jane Smith updated profile</li>
+      </ul>
+    </div>
   );
 }
 
