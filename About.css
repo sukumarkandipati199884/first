@@ -1,7 +1,6 @@
 .about {
   background-color: #1f1f1f;
   color: #ffffff;
-  text-align: center;
 }
 
 .about h2 {
@@ -11,6 +10,4 @@
 
 .about p {
   font-size: 1em;
-  max-width: 600px;
-  margin: 0 auto;
 }
