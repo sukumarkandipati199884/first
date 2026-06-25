@@ -1,21 +1,20 @@
 import React from 'react';
-import { AppBar, Toolbar, IconButton, Typography, Switch } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
+import { AppBar, Toolbar, Typography, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
-const Navbar = ({ toggleDarkMode }) => {
+function Navbar() {
   return (
     <AppBar position="static">
       <Toolbar>
-        <IconButton edge="start" color="inherit" aria-label="menu">
-          <MenuIcon />
-        </IconButton>
-        <Typography variant="h6" style={{ flexGrow: 1 }}>
-          SaaS Dashboard
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          Banking App
         </Typography>
-        <Switch onChange={toggleDarkMode} />
+        <Button color="inherit" component={Link} to="/dashboard">Dashboard</Button>
+        <Button color="inherit" component={Link} to="/transactions">Transactions</Button>
+        <Button color="inherit" component={Link} to="/profile">Profile</Button>
       </Toolbar>
     </AppBar>
   );
-};
+}
 
 export default Navbar;
