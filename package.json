@@ -1,5 +1,5 @@
 {
-  "name": "saas-dashboard",
+  "name": "react-banking-app",
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
@@ -11,14 +11,12 @@
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-scripts": "^5.0.0",
+    "react-scripts": "5.0.0",
     "@mui/material": "^5.0.0",
     "@emotion/react": "^11.0.0",
-    "@emotion/styled": "^11.0.0",
-    "react-router-dom": "^6.0.0"
+    "@emotion/styled": "^11.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.0.0",
-    "eslint-plugin-react": "^7.0.0"
+    "eslint": "^8.0.0"
   }
 }
