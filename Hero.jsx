@@ -6,7 +6,7 @@ function Hero() {
     <section id="hero" className="hero">
       <h1>Welcome to My Portfolio</h1>
       <p>I'm a Software Engineer</p>
-      <button>Contact Me</button>
+      <button>Explore</button>
     </section>
   );
 }
