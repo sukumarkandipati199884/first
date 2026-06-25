@@ -1,23 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const ctx = document.getElementById('enrollmentChart').getContext('2d');
-    const enrollmentChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-            datasets: [{
-                label: 'Enrollments',
-                data: [65, 59, 80, 81, 56, 55, 40],
-                backgroundColor: 'rgba(0, 188, 212, 0.2)',
-                borderColor: 'rgba(0, 188, 212, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
+    const links = document.querySelectorAll('nav ul li a');
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            window.scrollTo({
+                top: targetSection.offsetTop - 60,
+                behavior: 'smooth'
+            });
+        });
     });
 });
